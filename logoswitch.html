@@ -1,0 +1,47 @@
+<html>
+<body>
+<p>Page Title</p>
+  
+  <div class="dots">
+    <img id="white" onclick="switchImg()" src="http://scoutingwithtroop225.com/White%20Dot.jpeg" />
+    <img id="orange" style="display:none" onclick="switchImg()" src="http://dbprng00ikc2j.cloudfront.net/work/image/269918/qg7swq/ORANGE_DOT.jpg" />
+</div>
+
+<div id="logo" style="visibility:hidden;width:500px"><img style="width:200px" src=https://www.tweag.io/img/tweag-square.png></div>
+<div id="namepluslogo" style="visibility:hidden;width:500px"><img style="width:200px"src=https://www.tweag.io/img/logo-tweag-big.svg></div>
+<table width="50%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td onclick="document.getElementById('NameOrNot').innerHTML=document.getElementById('logo').innerHTML;">logo</td>
+    <td onclick="document.getElementById('NameOrNot').innerHTML=document.getElementById('namepluslogo').innerHTML;">logo+name</td>
+  </tr>
+</table>
+<div id="NameOrNot"></div>
+  <img src="https://www.tweag.io/img/tweag-square.png" alt="Circle" id="circle" width="200px" onclick="change();">
+<script>
+  function swapImage(id,primary,secondary) {
+    src=document.getElementById(id).src;
+    if (src.match(primary)) {
+      document.getElementById(id).src=secondary;
+    } else {
+      document.getElementById(id).src=primary;
+    }
+  }
+  </script>
+  <script>
+var image_tracker = 'orange';
+ 
+ function change(){
+ var image = document.getElementById('circle');
+ if(image_tracker=='orange'){
+ image.src='https://www.tweag.io/img/tweag-square.png';
+ image_tracker='blue';
+ }
+ else{
+ image.src='https://www.tweag.io/img/logo-tweag-big.svg';
+ image_tracker='orange';
+ }
+ }
+  </script>
+</body>
+  
+</html>
